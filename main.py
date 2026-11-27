@@ -2,6 +2,10 @@ import requests
 import os
 import argparse
 
+#run in terminal to activate stored API key:
+    #source ~/.bashrc
+    #python -c "import os; print(os.getenv('REST_COUNTRIES_API_KEY') is not None)"
+        #should return True
 
 API_URL = "https://api.restcountries.com/countries/v5"  # Replace with your chosen API endpoint
 
