@@ -1,10 +1,9 @@
-# [Project Title]
-
-A brief one- or two-sentence description of what this program does.
+# Countries, Regions, Languages, and Borders
+This program retrieves country data from the REST Countries API and allows users to search for countries based on their official languages. For each matching country, the program displays its name, region, bordering countries, and official languages.
 
 ## API
 
-This project uses the [API Name](https://api-url-here.com) API.
+This project uses the [REST Countries](https://api.restcountries.com/countries/v5) API.
 
 ## Installation
 
@@ -29,14 +28,16 @@ This project uses the [API Name](https://api-url-here.com) API.
 ## Usage
 
 ```bash
-python main.py
+python main.py --language
 ```
 
+User runs program including a language argument. 
 Describe what happens when the program runs — what prompt(s) appear and what the user can do.
 
 ## CLI Interactions
 
-Describe each interaction your CLI supports. For example:
+Describe each interaction your CLI supports.
 
-- **Filter by region** — enter a region name to see all matching records
-- **Look up by name** — enter a name to see details for one specific record
+- **Filter by language** —  Enter a language as a command-line argument to display all countries where that language is an official language.
+- **Language validation** — The program uses argparse to validate the language against the available languages returned by the API. If an unsupported language is entered, the program displays an error and the available choices.
+- **Country information** — For each matching country, the program displays: Country name, Geographic region, Bordering countries, Official languages
